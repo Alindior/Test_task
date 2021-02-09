@@ -1,0 +1,54 @@
+@mixin roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin animate-scale($delay, $size) {
+  transform: scale($size);
+  transition: $delay all;
+}
+
+@mixin animate-appear() {
+  animation-name: appear;
+  animation-duration: 2s;
+}
+
+@mixin hover($color) {
+  &:hover {
+    background-color: $color;
+  }
+}
+
+@mixin arrow-left() {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 16px;
+  content: '';
+  border-color: transparent;
+  border-style: solid;
+  border-width: 8px 12px;
+  border-right-color: #5e81ff;
+}
+
+@mixin arrow-right() {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 16px;
+  content: '';
+  border-color: transparent;
+  border-style: solid;
+  border-width: 8px 12px;
+  border-left-color: #5e81ff;
+}
+
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,55 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+.Pagination {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &__arrowLeft {
+    position: absolute;
+    left: -55px;
+    cursor: pointer;
+    display: block;
+
+    &-hide {
+      display: none;
+      @include animate-appear;
+    }
+
+    &::before {
+      @include arrow-left;
+    }
+
+    &:hover {
+      &::before {
+        border-right-color: $color-primary-hover;
+      }
+    }
+  }
+
+  &__arrowRight {
+    position: absolute;
+    right: -40px;
+    cursor: pointer;
+    display: block;
+
+    &-hide {
+      display: none;
+      @include animate-appear;
+    }
+
+    &::before {
+      @include arrow-right;
+    }
+
+    &:hover {
+      &::before {
+        border-left-color: $color-primary-hover;
+      }
+    }
+  }
+}

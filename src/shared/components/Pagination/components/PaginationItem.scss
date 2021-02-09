@@ -1,0 +1,17 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.PaginationItem {
+  height: 100%;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s all;
+  cursor: pointer;
+
+  &-active {
+    display: flex;
+    @include animate-appear;
+  }
+}

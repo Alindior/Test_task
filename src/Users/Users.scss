@@ -1,0 +1,11 @@
+.Users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 15px;
+
+  .Pagination {
+    margin-bottom: 15px;
+  }
+}

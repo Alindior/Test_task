@@ -1,0 +1,33 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.UserCard {
+  width: 400px;
+  height: 100px;
+  display: flex;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: $color-primary;
+  cursor: pointer;
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
+    @include animate-scale(0.3s, 1.05)
+  }
+
+  &__ava {
+    max-width: 100px;
+    height: auto;
+    background-size: cover;
+    margin-right: 15px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+}
